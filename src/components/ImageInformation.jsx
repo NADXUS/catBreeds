@@ -4,7 +4,7 @@ const ImageInformation = ({ image }) => {
   if (!image) return null;
   return (
     <View style={styles.container}>
-      <Image source={{ uri: image }} style={styles.image} />
+      <Image source={{ uri: image || "" }} style={styles.image} />
     </View>
   );
 };

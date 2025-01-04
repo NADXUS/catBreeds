@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import Search from "../../components/search";
 import CatsList from "../../components/catsList";
-import { HomeController } from "./home.controller";
+import HomeController from "./home.controller";
 import HomeTemplate from "../../templates/cardList.template";
 import Loading from "../../components/loading";
 

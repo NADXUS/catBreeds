@@ -2,7 +2,7 @@ import { CatsRepository } from "../../repository/cats.repository";
 import { GetAllCatsUseCase } from "../../useCases/getAllCats.useCase";
 import { SearchCatsByBreedUseCase } from "../../useCases/searchCatsByBreed.useCase";
 
-export class HomeController {
+class HomeController {
   catsRepository = new CatsRepository();
 
   getAllCatsUseCase = new GetAllCatsUseCase({
@@ -41,3 +41,4 @@ export class HomeController {
     }
   }
 }
+export default HomeController;
