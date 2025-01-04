@@ -1,11 +1,10 @@
 import { useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from "react";
-import { View } from "react-native";
-import HeaderInformation from "../components/headerInformation";
-import ImageInformation from "../components/ImageInformation";
-import DescriptionInformation from "../components/descriptionInformation";
-import { InformationController } from "../controllers/information.controller";
-import InformationTemplate from "../templates/information.template";
+import HeaderInformation from "../../components/headerInformation";
+import ImageInformation from "../../components/ImageInformation";
+import DescriptionInformation from "../../components/descriptionInformation";
+import InformationTemplate from "../../templates/detailInfo.template";
+import { InformationController } from "./information.controller";
 
 const $InformationController = new InformationController();
 

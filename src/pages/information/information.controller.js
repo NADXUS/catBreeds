@@ -1,4 +1,4 @@
-import { GetCatFromUrlUseCase } from "../useCases/getCatFromUrl.useCase";
+import { GetCatFromUrlUseCase } from "../../useCases/getCatFromUrl.useCase";
 
 export class InformationController {
   GetCatFromUrlUseCase = new GetCatFromUrlUseCase();

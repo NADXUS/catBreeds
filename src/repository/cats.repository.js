@@ -1,4 +1,5 @@
 import { HttpServices } from "../commons/httpServices";
+import constants from "../constants/constants";
 
 export class CatsRepository {
   constructor() {
@@ -7,7 +8,7 @@ export class CatsRepository {
 
   async getAll() {
     try {
-      const response = await this.httpService.get("/breeds");
+      const response = await this.httpService.get(constants.apis.getBreeds);
 
       return response.data;
     } catch (error) {
@@ -19,7 +20,7 @@ export class CatsRepository {
   async searchByBreed(searchInput) {
     try {
       const response = await this.httpService.get(
-        `/breeds/search?q=${searchInput}`
+        `${constants.apis.searchBreeds}?q=${searchInput}`
       );
 
       return response.data;

@@ -3,28 +3,35 @@ import { View, Text, FlatList, Button, Image, StyleSheet } from "react-native";
 const CatsList = ({ cats, navigation }) => {
   return (
     <View style={styles.container}>
-      <FlatList
-        style={styles.flatList}
-        data={cats}
-        renderItem={({ item }) => (
-          <View style={styles.itemContainer}>
-            <View style={styles.itemHeader}>
-              <Text style={styles.itemName}>{item.name}</Text>
-              <Button
-                title="More"
-                onPress={() => {
-                  navigation.navigate("Information", { cat: item });
-                }}
+      {cats.length === 0 ? (
+        <Text style={styles.noCatsText}>No cats found</Text>
+      ) : (
+        <FlatList
+          style={styles.flatList}
+          data={cats}
+          renderItem={({ item }) => (
+            <View style={styles.itemContainer}>
+              <View style={styles.itemHeader}>
+                <Text style={styles.itemName}>{item.name}</Text>
+                <Button
+                  title="More"
+                  onPress={() => {
+                    navigation.navigate("Information", { cat: item });
+                  }}
+                />
+              </View>
+              <Image
+                source={{ uri: item.image?.url }}
+                style={styles.itemImage}
               />
+              <View style={styles.itemFooter}>
+                <Text style={styles.itemOrigin}>{item.origin}</Text>
+                <Text style={styles.itemIQ}>IQ: {item.intelligence}</Text>
+              </View>
             </View>
-            <Image source={{ uri: item.image?.url }} style={styles.itemImage} />
-            <View style={styles.itemFooter}>
-              <Text style={styles.itemOrigin}>{item.origin}</Text>
-              <Text style={styles.itemIQ}>IQ: {item.intelligence}</Text>
-            </View>
-          </View>
-        )}
-      />
+          )}
+        />
+      )}
     </View>
   );
 };
@@ -72,6 +79,15 @@ const styles = StyleSheet.create({
   itemIQ: {
     fontWeight: "bold",
     fontSize: 20,
+  },
+  noCatsText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginTop: 20,
+    marginBottom: 20,
+    color: "black",
+    opacity: 0.5,
   },
 });
 
