@@ -13,11 +13,13 @@ export class HomeController {
     catsRepository: this.catsRepository,
   });
 
-  async getAllCats(setcats) {
+  async getAllCats(setcats, setloading) {
     try {
+      setloading(true);
       const response = await this.getAllCatsUseCase.execute();
       setcats(response);
 
+      setloading(false);
       return response;
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -25,12 +27,13 @@ export class HomeController {
     }
   }
 
-  async searchCats(searchInput, setcats, setsearchInput) {
+  async searchCats(searchInput, setcats, setloading) {
     try {
+      setloading(true);
       const response = await this.SearchCatsByBreedUseCase.execute(searchInput);
 
       setcats(response);
-
+      setloading(false);
       return response;
     } catch (error) {
       console.error("Error fetching data:", error);

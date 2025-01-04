@@ -4,7 +4,7 @@ export class SearchCatsByBreedUseCase {
   }
 
   async execute(searchInput) {
-    if (searchInput === "") {
+    if (searchInput == "") {
       const data = await this.catsRepository.getAll();
       if (data.length === 0) {
         throw new Error("No data found");

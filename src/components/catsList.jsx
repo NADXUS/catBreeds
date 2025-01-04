@@ -1,4 +1,5 @@
 import { View, Text, FlatList, Button, Image, StyleSheet } from "react-native";
+import Loading from "./loading";
 
 const CatsList = ({ cats, navigation }) => {
   return (
