@@ -12,7 +12,6 @@ export class SearchCatsByBreedUseCase {
     }
 
     const data = await this.catsRepository.searchByBreed(searchInput);
-    console.log(data);
 
     if (data.length === 0) {
       throw new Error("No data found");
