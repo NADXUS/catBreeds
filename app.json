@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "cute-cats",
-    "slug": "cute-cats",
+    "name": "cat-breeds",
+    "slug": "cat-breeds",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,8 +24,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": [
-      "expo-font"
-    ]
+    "plugins": ["expo-font"]
   }
 }
