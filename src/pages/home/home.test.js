@@ -15,6 +15,11 @@ jest.mock("@react-navigation/native", () => ({
   }),
 }));
 
+jest.mock("expo-font", () => ({
+  loadAsync: jest.fn().mockResolvedValue(true),
+  isLoaded: jest.fn().mockReturnValue(true),
+}));
+
 jest.mock("./home.controller", () => {
   return jest.fn().mockImplementation(() => {
     return {

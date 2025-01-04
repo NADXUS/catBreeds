@@ -24,6 +24,11 @@ jest.mock("./information.controller", () => {
   });
 });
 
+jest.mock("expo-font", () => ({
+  loadAsync: jest.fn().mockResolvedValue(true),
+  isLoaded: jest.fn().mockReturnValue(true),
+}));
+
 const renderWithNavigation = (component) => {
   return renderer.create(
     <NavigationContainer>{component}</NavigationContainer>
