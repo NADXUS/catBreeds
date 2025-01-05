@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-const Search = ({ handleSearch, setsearchInput, searchInput }) => {
+const Search = ({ handleSearch, setsearchInput, searchInput, cleanSearch }) => {
   return (
     <View style={styles.container}>
       <View style={styles.searchContainer}>
@@ -29,7 +29,10 @@ const Search = ({ handleSearch, setsearchInput, searchInput }) => {
             name="close-circle-outline"
             size={20}
             color="#666"
-            onPress={() => setsearchInput("")}
+            onPress={() => {
+              setsearchInput("");
+              cleanSearch();
+            }}
           />
         )}
       </View>
@@ -81,8 +84,11 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   button: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 4,
     backgroundColor: "#4F6BFF",
-    paddingHorizontal: 24,
+    paddingHorizontal: 15,
     height: 48,
     borderRadius: 12,
     justifyContent: "center",

@@ -26,6 +26,7 @@ const Home = () => {
         }
         setsearchInput={setsearchInput}
         searchInput={searchInput}
+        cleanSearch={() => $homeController.getAllCats(setcats, setloading)}
       ></Search>
 
       {loading ? (
