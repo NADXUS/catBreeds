@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "cute-cats",
-    "slug": "cute-cats",
+    "name": "cat-breeds",
+    "slug": "cat-breeds",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,10 +19,20 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.antoni_acevedo.catbreeds"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "0ec9ddde-2423-45cc-b88c-f8a92f1aa699"
+      }
+    },
+    "owner": "antoni_acevedo"
   }
 }
