@@ -1,6 +1,6 @@
 # CatBreeds
 
-**CatBreeds** es una aplicación móvil desarrollada con React Native y Expo que permite buscar y ver distintas razas de gatos, usando una arquitectura basada en controladores y casos de uso.
+**CatBreeds** es una aplicación móvil creada con React Native y Expo para buscar y ver distintas razas de gatos, basada en controladores y casos de uso.
 
 ---
 
@@ -79,4 +79,6 @@ Este proyecto está licenciado bajo la Licencia MIT (ver archivo LICENSE).
 
 ## Contacto
 
-Cualquier duda o sugerencia: leideracevedo07@gmail.com
+Para dudas o sugerencias: leideracevedo07@gmail.com
+
+Usa el archivo app.apk para probar la aplicación.
